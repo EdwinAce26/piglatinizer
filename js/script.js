@@ -3,8 +3,8 @@ $( document ).ready(function() {
   
     $("#latinize").click(function(){
        
-    //   var words = $("#input").val();
-    //         console.log(words);
+      var words = $("#input").val();
+            console.log(words);
     //     var vowel = ["a","e","i","o","u","y","A","E","I","O","U","Y"];
             
             // function translate (words){
@@ -40,16 +40,13 @@ $( document ).ready(function() {
             //         console.log();
             //     }
             // }
-            var response = translate();
-    // Create the sentenceToPigLatin function that takes a sentence as a parameter
-    	//Loops through all the words in the sentence and transforms each word
-    	//It should return a transfromed sentance
+            var response = translate(words);
     
     });  
     
     
-    var words = $("#input").val();
-        console.log(words); 
+    // var words = $("#input").val();
+    //     console.log(words); 
     
     function translate (words){
             var vowel = ["a","e","i","o","u","y","A","E","I","O","U","Y"];
