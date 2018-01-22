@@ -1,15 +1,8 @@
-// Pig Latin takes the first consonant (or consonant cluster) of an English 
-// word, moves it to the end of the word and suffixes an ay, or if a word
-// begins with a vowel you just add ay to the end. For example, pig becomes
-// igpay, banana becomes ananabay, and aadvark becomes aadvarkay.
-// CREATE THE FUNCTIONS BELOW
-
 // Document Ready Function. All of your jQuery should go in here. 
 $( document ).ready(function() {
-// Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
     $("#latinize").click(function(){
        
-        var vowel = ["a","e","i","o","u","y"]
+        var vowel = ["a","e","i","o","u","y","A","E","I","O","U","Y"];
             function translate (words){
                 
                 words = $("#input").val();
@@ -18,19 +11,36 @@ $( document ).ready(function() {
                 var splitWords = words.split("");
                     console.log(splitWords);
                 
-                var include = splitWords.includes(vowel);    
+                var include = vowel.includes(splitWords[0]);    
                     console.log(include);
                     
                if(include === true){
                     
                     $("#results").text(words + "ay");
-                    console.log()
+                    console.log();
+                    
+                }
+                else if(include ==! true){
+                   
+                   
+                //   alternate way 1
+                    // var con = splitWords.shift();
+                    // console.log(con);
+                    // var con1 = splitWords.push(con);
+                    // console.log(con1);
+                    // var con2 = con1.join(' ')
+                    // console.log(con2);
+                    
+                //  alternate way 2
+                    // var bcon = splitWords.shift();
+                    // splitWords[splitWords.length] = bcon;
+                    // var bcon1 = bcon.join();
+                    
+                    $("#results").text(bcon1 + "ay");
+                    console.log();
                 }
             }
-            
-        var response = translate();
-        
-        //console.log(response);
+            var response = translate();
     // Create the sentenceToPigLatin function that takes a sentence as a parameter
     	//Loops through all the words in the sentence and transforms each word
     	//It should return a transfromed sentance
