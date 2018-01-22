@@ -20,23 +20,21 @@ $( document ).ready(function() {
                     console.log();
                     
                 }
-                else if(include ==! true){
-                   
+                else{
                    
                 //   alternate way 1
-                    // var con = splitWords.shift();
+                    var con = splitWords.shift();
                     // console.log(con);
-                    // var con1 = splitWords.push(con);
+                    
+                    var con1 = splitWords.push(con);
+                    // console.log(splitWords);
                     // console.log(con1);
-                    // var con2 = con1.join(' ')
-                    // console.log(con2);
                     
-                //  alternate way 2
-                    // var bcon = splitWords.shift();
-                    // splitWords[splitWords.length] = bcon;
-                    // var bcon1 = bcon.join();
+                    var con2 = splitWords.join('')
+                    console.log(con2);
+                
                     
-                    $("#results").text(bcon1 + "ay");
+                    $("#results").text(con2 + "ay");
                     console.log();
                 }
             }
