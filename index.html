@@ -12,28 +12,26 @@
         <script src="js/script.js"></script>
     </head>
 
-    <body>
+    <body style="background-image:url(background.jpg); background-position: center bottom;">
         <div>
             <div class="container">
                 <div class="row">
                 <!--// Your HTML HERE-->
-    
-                    
-                    
+                    <br>
                     <h1>The Latinizer of the Puerco</h1>
-                    
+                   <!--<img src="http://pluspng.com/img-png/hog-head-png-pigs-cartoon-clipart-488.png">-->
                     <br>
                     <br>
                     <br>
                     
                     <div id="components">
-                        <input type="text" id="input" name="input" placeholder="Un-Latinized words here"/>
+                        <input type="text" id="input" name="input" placeholder="Un-Latinized words here" onclick="audio.play()"/>
                         <button id="latinize">Latinize</button>
                         <button id="delatinize">De-Latinize</button>
                         <button id="clear">Clear</button>
                     </div>
                     
-                    <div id="results"> </div>
+                    <div id="results" placeholder="results"> </div>
                     
                 </div>
             </div>
